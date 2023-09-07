@@ -8,8 +8,8 @@
 		<properties>			
 			<property name="javax.persistence.jdbc.driver" value="org.postgresql.Driver" />
             <property name="javax.persistence.jdbc.url" value="jdbc:postgresql://localhost:5432/cursojsfprimefaces" />
-            <property name="javax.persistence.jdbc.user" value="${username}" />
-            <property name="javax.persistence.jdbc.password" value="${password}" />
+            <property name="javax.persistence.jdbc.user" value="${DB_USERNAME}" />
+            <property name="javax.persistence.jdbc.password" value="${DB_PASSWORD}" />
 
 			<property name="javax.persistence.schema-generation.database.action" value="drop-and-create" />
       		<property name="javax.persistence.schema-generation.create-source" value="metadata" />

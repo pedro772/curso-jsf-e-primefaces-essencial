@@ -1,7 +1,9 @@
 package com.algaworks.erp.repository;
 
 import java.util.Date;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
@@ -22,7 +24,12 @@ public class CamadaPersistencia {
 		String username = dotenv.get("DB_USERNAME");
 		String password = dotenv.get("DB_PASSWORD");
 
-		EntityManagerFactory emf = Persistence.createEntityManagerFactory("AlgaWorksPU");
+		// Set the properties for the EntityManagerFactory
+		Map<String, String> properties = new HashMap<>();
+		properties.put("javax.persistence.jdbc.user", username);
+		properties.put("javax.persistence.jdbc.password", password);
+
+		EntityManagerFactory emf = Persistence.createEntityManagerFactory("AlgaWorksPU", properties);
 
 		EntityManager em = emf.createEntityManager();
 
