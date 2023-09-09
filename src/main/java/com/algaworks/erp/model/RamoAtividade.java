@@ -23,6 +23,10 @@ public class RamoAtividade implements Serializable {
 	@Column(nullable = false, length = 80)
 	private String descricao;
 
+	public Long getId() {
+		return id;
+	}
+
 	public String getDescricao() {
 		return descricao;
 	}
