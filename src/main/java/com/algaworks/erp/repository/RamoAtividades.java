@@ -1,5 +1,6 @@
 package com.algaworks.erp.repository;
 
+import java.io.Serializable;
 import java.util.List;
 
 import javax.inject.Inject;
@@ -11,7 +12,7 @@ import javax.persistence.criteria.Root;
 
 import com.algaworks.erp.model.RamoAtividade;
 
-public class RamoAtividades {
+public class RamoAtividades implements Serializable {
 	private static final long serialVersionUID = 1L;
 
 	@Inject
